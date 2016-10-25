@@ -25,7 +25,8 @@ The goal is to send a file to another computer in the lan, as fast as possible
 
  - to send a file
 
-  tcp file <host>
+  tcp file host
+
 
 > the host can be a IP address or a name, check your DNS configuration
 
