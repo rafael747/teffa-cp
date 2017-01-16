@@ -4,7 +4,7 @@ set -e
 
 ajuda()
 {
-	echo -e "dependences:\n"
+	echo -e "dependencies:\n"
 	
 	for i in nc dd pv md5sum awk file stat cut 
 	do
