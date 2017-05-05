@@ -19,12 +19,23 @@ ajuda()
 	echo -e "usage:\n\n\tTo send a file: `basename $0` <file> <host>"
 	echo -e "\tTo receive a file: `basename $0`"
 	exit
-} 
+}
 
 if [[ "$1" == "-h" ]]
 then
 	ajuda
 fi
+
+
+for i in nc dd pv md5sum awk file stat cut
+do
+	if ! a=`which $i` && test -x $a
+	then
+		ajuda
+	fi
+done
+
+ 
 
 #Client
 if [[ "$#" -eq "0" ]]
